@@ -11,7 +11,7 @@ class Livre {
         $this->_titre = $titre;
 	    $this->_auteur = $auteur;
 	    $this->_description = $description;
-            $this->_image = $image;
+            $this->_image = $image.".jpg";
     } 
     
         public function getTitre(){
