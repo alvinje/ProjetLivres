@@ -10,7 +10,7 @@
 
                  <?php  foreach ($livres as $titre => $livre)
                     {                
-                            echo '<a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre().'</a>'.$livre->getAuteur().'<img src="Images/'.$livre->getImage().'"></img>';
+                            echo '<img src="Images/'.$livre->getImage().'"></img><br />'.'<a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre().'</a><br />'.$livre->getAuteur();
                            
                     }
                         

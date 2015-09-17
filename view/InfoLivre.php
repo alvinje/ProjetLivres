@@ -6,7 +6,7 @@
 
     <?php 
 
-            echo 'Image:' . $livre->getImage() . '<br/>';
+            echo  '<img src="Images/'.$livre->getImage().'"></img><br />';
             echo 'Titre:' . $livre->getTitre() . '<br/>';
             echo 'Auteur:' . $livre->getAuteur() . '<br/>';
             echo 'Description:' . $livre->getDescription() . '<br/>';
