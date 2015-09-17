@@ -22,7 +22,7 @@ and open the template in the editor.
            return $array;
         }
    
-        echo "<div> <ul> <li> .$donnees['auteur']. </li> </ul> </div>";
+        echo '.$donnees['auteur'].';
         ?>
     </body>
 </html>
