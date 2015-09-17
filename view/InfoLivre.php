@@ -6,6 +6,7 @@
 
     <?php 
 
+            echo 'Image:' . $livre->getImage() . '<br/>';
             echo 'Titre:' . $livre->getTitre() . '<br/>';
             echo 'Auteur:' . $livre->getAuteur() . '<br/>';
             echo 'Description:' . $livre->getDescription() . '<br/>';

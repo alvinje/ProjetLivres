@@ -4,12 +4,14 @@ class Livre {
 	public $_titre;
 	public $_auteur;
 	public $_description;
+        public $_image;
 	
-	public function __construct($titre, $auteur, $description)  
+	public function __construct($titre, $auteur, $description, $image)  
     {  
         $this->_titre = $titre;
 	    $this->_auteur = $auteur;
 	    $this->_description = $description;
+            $this->_image = $image;
     } 
     
         public function getTitre(){
@@ -21,6 +23,9 @@ class Livre {
         }
         public function getDescription(){
             return $this->_description;
+        }
+        public function getImage(){
+            return $this->_image;
         }
 }
 

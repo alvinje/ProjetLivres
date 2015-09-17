@@ -1,21 +1,28 @@
 <?php
 
 include_once("model/Livre.php");
-include_once ("model/DbConnect.php");
+include_once("model/DbConnect.php");
 
 class Model {
-	public function getLivreList()
+    
+        private $_connexionDb;
+        
+        public function __construct() {
+            $this->_connexionDb = new DbConnect();
+        }
+                
+	public function getListeLivres()
 	{
-            $listLivres = array();
-            $livres = $this->_dbConnexion->requete("SELECT * FROM Livre");
-           // var_dump($livres);
+            $listeLivres = array();
+            $livres = $this->_connexionDb->requete("SELECT * FROM livre");
+           //var_dump($livres);
             foreach($livres as $livre){
-                if($livre->idEmprunteur!=0){
-                    array_push($listLivres, new Livre($livre->titre, $livre->isbn, $livre->auteur, $livre->description));
+                {
+                    array_push($listeLivres, new Livre($livre->titre, $livre->auteur, $livre->description, $livre->image));
                 }
                  
             }
-            return $listLivres;
+            return $listeLivres;
 	}
 	public function getLivre($titre)
 	{
