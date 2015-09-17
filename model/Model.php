@@ -27,7 +27,14 @@ class Model {
 	public function getLivre($titre)
 	{
 		$listeLivres = $this->getListeLivres();
-		return $listeLivres[$titre];
+                
+               foreach($listeLivres as $livre){
+                   if($titre == $livre->getTitre()){
+                       return $livre;
+                   }
+                   
+               }
+		
 	}
 
 }
