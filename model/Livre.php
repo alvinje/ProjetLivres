@@ -8,7 +8,7 @@ class Livre {
 	
 	public function __construct($titre, $auteur, $description, $image)  
     {  
-        $this->_titre = $titre;
+            $this->_titre = $titre;
 	    $this->_auteur = $auteur;
 	    $this->_description = $description;
             $this->_image = $image.".jpg";

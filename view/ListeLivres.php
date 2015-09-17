@@ -4,16 +4,19 @@
     </head>
 <body>
     
-    <table class='col-md-5'>
+    <div class='col-md-5'style="float: left;">
             <tr><td>Titre</td><td>Auteur</td></tr>
+            
 
                  <?php  foreach ($livres as $titre => $livre)
-                    {
-                            echo '<tr><td><a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre().'</a></td><td>'.$livre->getAuteur().'</td><td>'.'<img src="Images/"'.$livre->getImage().'></img>'.'</td></tr>';
+                    {                
+                            echo '<a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre().'</a>'.$livre->getAuteur().'<img src="Images/'.$livre->getImage().'"></img>';
+                           
                     }
+                        
 ?>
             
-    </table>
+            </div>
     
 </body>
 </html>
