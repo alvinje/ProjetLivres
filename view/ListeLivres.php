@@ -9,10 +9,11 @@
 
                     foreach ($livres as $titre => $livre)
                     {
-                            echo '<tr><td><a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre().'</a></td><td>'.$livre->getAuteur().'</td></tr>';
+                            echo '<tr><td><a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre().'</a></td><td>'.$livre->getAuteur().'</td><td>'.$livre->getImage().'</td></tr>';
                     }
 
             
-    "</table>";?>
+    "</table>";
+    ?>
 </body>
 </html>

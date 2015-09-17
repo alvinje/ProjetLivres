@@ -1,6 +1,7 @@
 <?php
 
-class DbConnect{
+class DbConnect
+{
     
     private $_host;
     private $_username;
