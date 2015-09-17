@@ -1,19 +1,21 @@
 <?php
 
 include_once("model/Livre.php");
+include_once ("model/DbConnect.php");
 
 class Model {
-	public function getListeLivres()
+	public function getLivreList()
 	{
-
-		return array(
-			"Don Quichotte" => new Livre("Don Quichotte", "Miguel de Cervantes", "Un classique Espagnol."),
-			"L'Étranger" => new Livre("L'Étranger", "Albert Camus", "Roman français du XXème."),
-			"Faust" => new Livre("Faust", "Goethe", ""),
-                        "Le Chateau" => new Livre("Le Chateau", "Franz Kafka", "Roman du célèbre écrivain tchèque Kafka."),
-                        "Essais" => new Livre("Essais", "Montaigne", "Mieux vaut tête bien faite que tête bien pleine"),
-                        "1984" => new Livre("1984", "George Orwell", "Un roman anglais")
-		);
+            $listLivres = array();
+            $livres = $this->_dbConnexion->requete("SELECT * FROM Livre");
+           // var_dump($livres);
+            foreach($livres as $livre){
+                if($livre->idEmprunteur!=0){
+                    array_push($listLivres, new Livre($livre->titre, $livre->isbn, $livre->auteur, $livre->description));
+                }
+                 
+            }
+            return $listLivres;
 	}
 	public function getLivre($titre)
 	{
