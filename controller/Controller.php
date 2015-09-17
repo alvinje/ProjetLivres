@@ -133,7 +133,11 @@ class Controller {
 
     </div>
     <!-- /#wrapper -->
-
+    
+    <div>
+        
+    </div>
+    <!-- /#Footer -->
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
