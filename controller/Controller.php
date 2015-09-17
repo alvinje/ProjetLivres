@@ -1,5 +1,6 @@
 <?php
 include_once("model/Model.php");
+include ("view/Header.php");
 
 class Controller {
 	public $model;
@@ -20,14 +21,15 @@ class Controller {
                     if($_GET['action']== 'livres'){
                         $livres = $this->model->getListeLivres();
 			include 'view/ListeLivres.php';
+                        include ("view/Footer.php");
                     }		
 		}
 		else
 		{
 			$livres = $this->model->getListeLivres();
 			include 'view/ListeLivres.php';
+                        include ("view/Footer.php");
 		}
 	}
 }
-
 ?>
