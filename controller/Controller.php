@@ -130,10 +130,10 @@ class Controller {
 
         </div>
         <!-- /#page-wrapper -->
-
+        
     </div>
     <!-- /#wrapper -->
-    
+  
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -146,4 +146,9 @@ class Controller {
     <script src="js/plugins/morris/morris-data.js"></script>   
 
 </body>
+    <div class="row">
+        <div class="col-lg-12 col-xs-1">
+          <h2 class="page-footer">Test</h2>
+        </div>
+    </div>
 </html>
