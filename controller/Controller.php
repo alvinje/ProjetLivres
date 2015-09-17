@@ -85,13 +85,13 @@ class Controller {
 						  </div>
 					</div><!-- /.container -->
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
+                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Nouveautés</a>
+                        <a href="nouveaute.php"><i class="fa fa-fw fa-bar-chart-o"></i> Nouveautés</a>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Auteurs</a>
+                        <a href="view/auteurs.php"><i class="fa fa-fw fa-table"></i> Auteurs</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Genres <i class="fa fa-fw fa-caret-down"></i></a>
@@ -115,7 +115,7 @@ class Controller {
 
                 <!-- Page Heading -->
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xs-1">
                         <h1 class="page-header">
                             Bienvenue !
                         </h1>
@@ -134,10 +134,6 @@ class Controller {
     </div>
     <!-- /#wrapper -->
     
-    <div>
-        
-    </div>
-    <!-- /#Footer -->
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
