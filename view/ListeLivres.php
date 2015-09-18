@@ -13,12 +13,13 @@
         
         <!-- /.row -->
         
- <?php  foreach ($livres as $titre => $livre){
+ <?php 
  $i = 0;
-     if ($i == 0)
- {
-     echo '<div class="row">';
- }
+
+foreach ($livres as $titre => $livre){
+    $i++;
+ if ($i == 1) {  echo '<div class="row">'; }
+ 
            echo '<div class="col-md-4 portfolio-item">';
                echo '<a href="#">';
                    echo '<img class="img-responsive" src="Images/'.$livre->getImage().'" alt="">';
@@ -30,16 +31,12 @@
                echo '</h3>';
                 echo'<h4>'.$livre->getAuteur().'</h4>';
             echo'</div>';
-    if ($i == 3)
-    {
-            echo'</div>';
-    }
-    if($i == 3)
-    {
+    if ($i==3) { 
+        echo'</div>';  
         $i = 0;
     }
-    $i++;
     }
+    
  
  
     ?>
