@@ -62,10 +62,13 @@ and open the template in the editor.
           box-sizing: border-box;
 }
  
+body
+{
+    background-image: url(Images/Background.jpg);
+}
 .pic {
   border: 10px solid #3C1100;  
   float: left;
-
   margin: 20px;
   overflow: hidden;
    
