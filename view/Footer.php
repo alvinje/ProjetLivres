@@ -1,7 +1,7 @@
         <!-- Footer -->
         <footer>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="text-align: center;">
                     <p>Copyright &copy; Projet Mvc_Bibli 2015</p>
                 </div>
             </div>
