@@ -1,6 +1,5 @@
 
 <?php header('Content-type: text/html; charset=UTF-8'); ?>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- Page Content -->
     <div class="container">
 
@@ -22,19 +21,19 @@ foreach ($livres as $titre => $livre){
     $i++;
  if ($i == 1) {  echo '<div class="row">'; }
  
-           echo '<div class="col-md-4 portfolio-item" >';
+           echo '<div class="col-md-4 col-xs-12 portfolio-item" >';
                echo '<a href="#">';
                echo'<div class = "morph pic">';
                    echo '<a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.'<img src="Images/'.$livre->getImage().'" alt="">';
                 echo '</a>';
                 echo'</div>';
                    echo '</a>';
-                echo '<h3>';
+                echo '<h3 class="col-md-4.5 col-xs-12 centrer">';
                     echo '<a href="#">';                  
                     echo '<a href="index.php?action=livre&amp;livre='.$livre->getTitre().'">'.$livre->getTitre();                        
                     echo '</a>';
                echo '</h3>';
-                echo'<h4>'.$livre->getAuteur().'</h4>';
+                echo'<h4 class="col-md-4.5 col-xs-12 centrer">'.$livre->getAuteur().'</h4>';
             echo'</div>';
     if ($i==3) { 
         echo'</div>';  

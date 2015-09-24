@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,13 +40,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Accueil</a>
+                <a class="navbar-brand" href="index.php">Accueil</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Auteurs</a>
+                        <a href="auteur.php">Auteurs</a>
                     </li>
                     <li>
                         <a href="#">A Propos</a>
@@ -59,7 +60,7 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

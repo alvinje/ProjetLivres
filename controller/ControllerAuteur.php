@@ -18,6 +18,7 @@ class Controller {
                     if($_GET['action']== 'auteur'){
                         $auteur = $this->model->getAuteur($_GET['auteur']);
 			include 'view/InfoAuteur.php';
+                        include ("view/Footer.php");
                     }
                     if($_GET['action']== 'auteurs'){
                         $auteurs = $this->model->getListeAuteur();

@@ -5,16 +5,21 @@
 <body>
 
     <?php 
+   
+            echo '<div class="row">';
+                echo '<div class="col-lg-12">';
+                    echo '<h1 class="page-header centrer">' . $auteur->getPrenom() . ' ' . $auteur->getNom() . '</h1>';
+                    echo '<h4 class="col-md-12">Description:</h4><p class="col-md-4">' . $auteur->getDescription() . '</p><br/>';
+                    echo '<h4 class="col-md-12">Livres publiés :</h4>';
+                    echo '<ul class="col-md-12">';
 
-            echo '<h3 class="centrer">' . $auteur->getPrenom() . ' ' . $auteur->getNom() . '</h3><br/>';
-            echo '<h4>Description:</h4>' . $auteur->getDescription() . '<br/>';
-            echo '<h4>Livres publiés :</h4>';
-            echo '<ul>';
+                    echo '<li class="col-md-12 centrer ">' . $auteur->getLivre() . '</li>';
 
-                echo '<li>' . $auteur->getLivre() . '</li>';
-
-            echo '</ul>';
+                    echo '</ul>';
+                 echo'</div>';
+            echo'</div>';
     ?>
-    <a href="index.php"><button class="info">Retour</button></a>
+    </br>
+    <a href="auteur.php" class="col-md-12"><button class="btn  btn-primary">Retour</button></a>
 </body>
 </html>
