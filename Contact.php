@@ -1,8 +1,8 @@
 <?php 
 	include_once("view/Header.php");
-        
-            if (isset($_POST["envoyer"])) {
         $result='';
+            if (isset($_POST["envoyer"])) {
+        
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
@@ -62,7 +62,15 @@ if (!$errMessage) {
         </div>
     </div>
 </form>
-        
+                
+<address class="col-xs-12 col-md-12 centrer">
+  <strong>Horaires</strong><br>
+  Lundi : 8h-12h 14-18h<br>
+  Mardi : 8h-12h 14-18h<br>
+  Mercredi : 8h-12h 14-18h<br>
+  Jeudi : 8h-12h 14-18h<br>
+  Vendredi : 8h-12h 14-18h<br>
+</address>
     </body>
 </html>
 
