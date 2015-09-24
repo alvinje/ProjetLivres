@@ -95,6 +95,29 @@ body
           transform: rotate(360deg);
 
 }
+/*MORPH*/
+.morph1 {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.morph1:hover {
+  border-radius: 25%;
+  -webkit-transform: rotate(5deg);
+     -moz-transform: rotate(5deg);
+       -o-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+
+}
+
+.centrer 
+{
+    text-align: center;
+}
 ////////////////////////////////////////////////////////
 .full {
     width: 100%;	
