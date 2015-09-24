@@ -44,8 +44,6 @@ foreach ($livres as $titre => $livre){
  
  
     ?>
-        
-        <hr>
 
         <!-- Pagination -->
         <div class="row text-center">
