@@ -49,7 +49,7 @@
                         <a href="auteur.php">Auteurs</a>
                     </li>
                     <li>
-                        <a href="#">A Propos</a>
+                        <a href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-<script src="js/jquery.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

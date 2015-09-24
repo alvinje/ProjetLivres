@@ -12,9 +12,7 @@
                     echo '<h4 class="col-md-12">Description:</h4><p class="col-md-4">' . $auteur->getDescription() . '</p><br/>';
                     echo '<h4 class="col-md-12">Livres publiés :</h4>';
                     echo '<ul class="col-md-12">';
-
-                    echo '<li class="col-md-12 centrer ">' . $auteur->getLivre() . '</li>';
-
+                        echo '<li class="col-md-12 list-unstyled">' . $auteur->getLivre() . '</li>';
                     echo '</ul>';
                  echo'</div>';
             echo'</div>';

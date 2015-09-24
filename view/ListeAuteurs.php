@@ -22,7 +22,7 @@ echo '<div class="row">';
  
            echo '<div class="col-md-4 portfolio-item" >';
                echo'<div class = "">';
-                   echo '<a href="auteur.php?action=auteur&amp;auteur='.$auteur->getNom().'">'.$auteur->getNom().'</a>';
+                   echo '<a href="auteur.php?action=auteur&amp;auteur='.$auteur->getNom().'"><h4>'.$auteur->getNom().'</h4></a>';
                 echo'</div>';
             echo'</div>';
         echo'</div>';  
