@@ -36,6 +36,27 @@ class Model {
                }
 		
 	}
+        
+        public function insert($titre,$auteur,$description,$image)
+        {
+         $livres = $this->_connexionDb->requete("INSERT INTO livre
+					(titre,
+					auteur,
+					description,
+					image)
+					VALUES
+					('$titre',
+					'$auteur',
+					'$description',
+					'$image')");
+        return $livres;
+        }
+        
+        public function delete($titre)
+        {
+        $livres = $this->_connexionDb->requete("DELETE from livre WHERE titre='$titre'");
+        return $livres;
+        }
 
 }
 

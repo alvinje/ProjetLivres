@@ -6,14 +6,13 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
+                <button class="btn btn-success btnadd">Ajouter un livre</button>
                 <h1 class="page-header"style="text-align: center;">Liste des Livres
                     
                 </h1>
             </div>
         </div>
-        
         <!-- /.row -->
-        
  <?php 
  $i = 0;
 
@@ -42,9 +41,66 @@ foreach ($livres as $titre => $livre){
     }
     
  
- 
+ //Ajout nouveau livre
+	if (isset ($_POST['creer']))
+		{
+		$titre = htmlentities($_POST['titre'],ENT_QUOTES,"UTF-8");
+		$auteur = htmlentities($_POST['auteur'],ENT_QUOTES,"UTF-8");
+		$description = ($_POST['description']);
+                $image = ($_POST['image']);
+		
+                $this->_connexionDb->insert($titre,$auteur,$description,$image);
+                header("Location: index.php");
+		}
     ?>
+<!--MODAL NOUVEAU LIVRE-->			
 
+    <div class="modal fade" id="modalNouveauLivre" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Ajout d'un nouveau livre</h4>
+            </div>
+                    <form class="form-horizontal" method="post">
+                        <div class="modal-body">
+                            <div class="control-group">
+				<label class="control-label">Titre</label>
+                                    <div class="controls">
+					<input name="titre" type="text"  placeholder="Titre du livre" required>
+                                    </div>
+                            </div>
+                            <div class="control-group">
+				<label class="control-label">Auteur</label>
+					<div class="controls">
+					    <input name="auteur" type="text"  placeholder="Auteur du livre" required>
+					</div>
+                            </div>
+                            <div class="control-group">
+				<label class="control-label">Description</label>
+                                    <div class="controls">
+                                         <textarea name="description" rows = "3" cols = "40" placeholder="Description courte du livre"></textarea>
+                                    </div>
+                            </div>
+                            <div class="control-group">
+				<label class="control-label">Nom image</label>
+                                    <div class="controls">
+                                          <p><input name="image" type="text"  placeholder="Nom de l'image" required>.jpg</p>
+                                    </div>
+                            </div>
+			</div>
+			<div class="modal-footer">
+				<div class="form-actions">
+					<button type="submit" class="btn btn-success" name="creer">Ajouter</button>
+					<a class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Annuler</a>
+				</div>
+			</div>
+		</form>
+            </div>
+        </div>
+        </div>
         <!-- Pagination -->
         <div class="row text-center">
             <div class="col-lg-12">
@@ -73,3 +129,4 @@ foreach ($livres as $titre => $livre){
                 </ul>
             </div>
         </div>
+</div>
