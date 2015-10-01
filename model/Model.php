@@ -37,6 +37,19 @@ class Model {
 		
 	}
         
+        public function rechercher ($titre)
+        {
+            $listeLivres =$this->getListeLivres();
+            foreach($listeLivres as $livre)
+            {
+                if(strtolower($titre) == strtolower($livre->getTitre()) || strtolower($titre) == strtolower($livre->getAuteur()))
+                {
+                return $livre;
+            
+            }
+            }
+        }
+            
         public function insert($titre,$auteur,$description,$image)
         {
          $livres = $this->_connexionDb->requete("INSERT INTO livre
