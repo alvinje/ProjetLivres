@@ -33,3 +33,6 @@
         
         </div>
 </div>
+<?php 
+	include_once("view/Footer.php");
+        ?>
